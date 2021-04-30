@@ -1,0 +1,11 @@
+Cython
+numpy
+torch
+networkx
+tqdm
+scipy
+geomstats
+geoopt
+biopython
+python-Levenshtein
+matplotlib
