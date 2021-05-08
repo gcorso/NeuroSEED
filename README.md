@@ -1,6 +1,6 @@
 # Neural Sequence Distance Embeddings 
 
-Official implementation of Neural Sequence Distance Embedding (Neural SEED) in PyTorch. Neural SEED is a novel framework to embed biological sequences in geometric vector spaces. The preprint of the project will be available soon.
+Official implementation of Neural Sequence Distance Embedding (NeuroSEED) in PyTorch. Neural SEED is a novel framework to embed biological sequences in geometric vector spaces.
 
 ![diagram](./tutorial/cover.png)
 
@@ -20,8 +20,8 @@ The repository is organised in four main folders one for each of the tasks analy
 Create a virtual (or conda) environment and install the dependencies:
 
 ```
-python3 -m venv neural_seed
-source neural_seed/bin/activate
+python3 -m venv neuroseed
+source neuroseed/bin/activate
 pip install -r requirements.txt
 ```
 
@@ -32,10 +32,6 @@ cd hierarchical_clustering/relaxed/mst; python setup.py build_ext --inplace; cd 
 cd hierarchical_clustering/relaxed/unionfind; python setup.py build_ext --inplace; cd ../../..
 ```
 
-
-## Reference
-
-The preprint of the project will be available soon.
 
 ## License
 
