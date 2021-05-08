@@ -25,7 +25,7 @@ gdown --id 1lEb1xaXw2e_XXGHceqaN3i0ntneiv7zZ    # for the RT988 dataset
 
 ## Tuned scripts
 
-![diagram](../tutorial/edit_synthetic.png)
+![diagram](../tutorial/edit_synthetic.PNG)
 
 #### Synthetic dataset
 ```
@@ -71,7 +71,7 @@ python -m edit_distance.models.transformer.train --mask=local1 --segment_size=16
 python -m edit_distance.models.transformer.train --mask=local1 --segment_size=16 --heads=1 --trans_layers=2 --hidden_size=16 --layer_norm=True --epochs=500 --distance=square --loss=mse --lr=0.001 --weight_decay=0.0 --dropout=0.0 --embedding_size=128 --readout_layers=1 --print_every=5 --patience=50 --batch_size=128 --data="./edit_large_1024.pkl" --closest_data_path="./closest_large_1024.pkl" --hierarchical_data_path="./hc_1024_large.pkl"
 ```
 
-![diagram](../tutorial/edit_real.png)
+![diagram](../tutorial/edit_real.PNG)
 
 #### RT988 dataset
 
