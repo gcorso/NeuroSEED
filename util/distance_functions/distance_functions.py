@@ -25,7 +25,7 @@ def manhattan_distance(t1_emb, t2_emb):
     return d
 
 
-def hyperbolic_distance(u, v, epsilon=1e-9):  # changed from epsilon=1e-7 to reduce error
+def hyperbolic_distance(u, v, epsilon=1e-7):  # changed from epsilon=1e-7 to reduce error
     sqdist = torch.sum((u - v) ** 2, dim=-1)
     squnorm = torch.sum(u ** 2, dim=-1)
     sqvnorm = torch.sum(v ** 2, dim=-1)

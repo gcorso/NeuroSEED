@@ -1,3 +1,5 @@
+import numpy as np
+import scipy.spatial.distance
 import torch
 import torch.nn.functional as F
 
@@ -39,6 +41,14 @@ def hyperbolic_matrix(enc_reference, enc_query, scaling=None):
         d = d.detach().cpu() * scaling.detach().cpu()
     return d
 
+
+def hyperbolic_matrix_numpy(u, v, eps=1e-9):
+    m = scipy.spatial.distance.cdist(u, v) ** 2
+    u_sqr = np.sum(u ** 2, axis=1)
+    v_sqr = np.sum(v ** 2, axis=1)
+    divisor = np.maximum(1. - np.expand_dims(u_sqr, axis=1), eps) * np.maximum(1. - np.expand_dims(v_sqr, axis=0), eps)
+    D_ij = np.arccosh(1 + 2 * m / divisor)
+    return D_ij
 
 
 DISTANCE_MATRIX = {

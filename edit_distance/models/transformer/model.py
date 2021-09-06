@@ -1,6 +1,7 @@
 import math
 import torch
 import torch.nn as nn
+import torch.nn.functional as F
 from util.ml_and_math.layers import MLP
 
 
@@ -11,6 +12,9 @@ class Transformer(nn.Module):
         super(Transformer, self).__init__()
 
         self.segment_size = segment_size
+        self.padding = (- len_sequence) % segment_size
+        len_sequence += self.padding
+        print("padding", self.padding)
 
         if mask == "empty":
             self.mask_sequence = generate_empty_mask(len_sequence//segment_size).to(device)
@@ -29,6 +33,11 @@ class Transformer(nn.Module):
         self.to(device)
 
     def forward(self, sequence):
+
+        # initial padding
+        if self.padding > 0:
+            sequence = F.pad(sequence, (0,0,0,self.padding))
+
         # sequence (B, N, 4)
         (B, N, _) = sequence.shape
 
