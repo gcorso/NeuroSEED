@@ -1,6 +1,6 @@
-# Neural Sequence Distance Embeddings 
+# Neural Distance Embeddings for Biological Sequences
 
-Official implementation of Neural Sequence Distance Embedding (NeuroSEED) in PyTorch. NeuroSEED is a novel framework to embed biological sequences in geometric vector spaces. Preprint will we published soon.
+Official implementation of Neural Distance Embeddings for Biological Sequences (NeuroSEED) in PyTorch. NeuroSEED is a novel framework to embed biological sequences in geometric vector spaces. Preprint will we published soon.
 
 ![diagram](./tutorial/cover.png)
 
