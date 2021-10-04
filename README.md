@@ -1,6 +1,6 @@
 # Neural Distance Embeddings for Biological Sequences
 
-Official implementation of Neural Distance Embeddings for Biological Sequences (NeuroSEED) in PyTorch. NeuroSEED is a novel framework to embed biological sequences in geometric vector spaces. Preprint will we published soon.
+Official implementation of Neural Distance Embeddings for Biological Sequences (NeuroSEED) in PyTorch published at NeurIPS 2021 ([preprint](https://arxiv.org/abs/2109.09740)). NeuroSEED is a novel framework to embed biological sequences in geometric vector spaces.
 
 ![diagram](./tutorial/cover.png)
 
@@ -30,6 +30,17 @@ Then install the `mst` and `unionfind` packages used for the hierarchical cluste
 ```
 cd hierarchical_clustering/relaxed/mst; python setup.py build_ext --inplace; cd ../../..
 cd hierarchical_clustering/relaxed/unionfind; python setup.py build_ext --inplace; cd ../../..
+```
+
+## Reference
+
+```
+@article{corso2021neuroseed,
+  title={Neural Distance Embeddings for Biological Sequences},
+  author={Corso, Gabriele and Ying, Rex and P{\'a}ndy, Michal and Veli{\v{c}}kovi{\'c}, Petar and Leskovec, Jure and Li{\`o}, Pietro},
+  journal={Advances in Neural Information Processing Systems},
+  year={2021}
+}
 ```
 
 
