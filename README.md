@@ -4,6 +4,9 @@ Official implementation of Neural Distance Embeddings for Biological Sequences (
 
 ![diagram](./tutorial/cover.png)
 
+Note: unfortunately due to my move between institutions the download scripts are broken and the files are no longer available on the original Drive. I have reuploaded them [here](https://drive.google.com/drive/folders/1tmXtsUV3MwxIDr-NB8Uk78IoCkBZtiu_?usp=sharing), but reach out if you believe there are some missing files.
+
+
 ## Overview
 
 The repository is organised in four main folders one for each of the tasks analysed. Each of these contain scripts and models used for the task as well as instructions on how to run them and the tuned hyperparameters found. 
